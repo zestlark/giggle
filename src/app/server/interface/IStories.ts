@@ -1,7 +1,8 @@
 export type IStories = {
-    title: string,
-    authId: string,
-    description: string,
-    story: string,
+    title: string;
+    image: string;
+    authId: string;
+    description: string;
+    story: string;
     hidden: boolean
 }

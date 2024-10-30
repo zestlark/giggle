@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { MongoDBConnect } from "./_config/mongoDB";
 
 export const metadata: Metadata = {
   title: "Create Next App",
