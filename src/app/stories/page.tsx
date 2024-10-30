@@ -1,5 +1,5 @@
 import Banner from "../component/banner";
-import ImageUrl from '../../assets/knight.gif'
+import ImageUrl from '../../assets/1_i4fumIDHzHH__S-Swz0KGg.gif'
 
 export default function page() {
     const bannerData = {
