@@ -7,6 +7,16 @@
   src: url(./fonts/Atop-R99O3.ttf);
 }
 
-.giggleFont{
+.giggleFont {
   font-family: giggleFont;
+}
+
+body{
+  background: black;
+  color: white;
+}
+
+.bg1 {
+  background-image: url(../assets/LOST.gif) ;
+  background-size: cover;
 }
