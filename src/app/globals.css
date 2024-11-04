@@ -7,16 +7,32 @@
   src: url(./fonts/Atop-R99O3.ttf);
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .giggleFont {
   font-family: giggleFont;
 }
 
-body{
+body {
   background: black;
   color: white;
 }
 
 .bg1 {
-  background-image: url(../assets/LOST.gif) ;
+  background-image: url(../assets/LOST.gif);
   background-size: cover;
+}
+
+.storyForm input,textarea {
+  padding: 7px;
+  border-radius: 5px;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  outline: none;
+}
+
+.storyForm input::placeholder,textarea::placeholder{
+  color: rgba(255, 255, 255, 0.733);
 }

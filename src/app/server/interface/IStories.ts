@@ -1,4 +1,5 @@
 export type IStories = {
+    _id?:string,
     title: string;
     image: string;
     authId: string;

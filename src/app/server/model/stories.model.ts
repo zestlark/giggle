@@ -1,8 +1,12 @@
-import { model, Schema } from "mongoose";
+import { model, models, Schema } from "mongoose";
+import { IStories } from "../interface/IStories";
+import { Model } from "mongoose";
 
 const storiesSchema = new Schema({
     title: String,
-    authId: Schema.Types.ObjectId,
+    image: String,
+    // authId: Schema.Types.ObjectId,
+    authId: String,
     description: String,
     story: String,
     hidden: Boolean
@@ -10,4 +14,13 @@ const storiesSchema = new Schema({
     timestamps: true,
 })
 
-export const storiesModel = model('stories', storiesSchema)
+let storiesModel: Model<IStories>
+
+if (models.stories) {
+    storiesModel = model<IStories>('stories');
+} else {
+    storiesModel = model<IStories>('stories', storiesSchema)
+}
+
+
+export { storiesModel };
