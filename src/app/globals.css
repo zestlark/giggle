@@ -25,7 +25,8 @@ body {
   background-size: cover;
 }
 
-.storyForm input,textarea {
+.storyForm input,
+textarea {
   padding: 7px;
   border-radius: 5px;
   background-color: rgb(53, 53, 53);
@@ -33,6 +34,12 @@ body {
   outline: none;
 }
 
-.storyForm input::placeholder,textarea::placeholder{
+.storyForm input::placeholder,
+textarea::placeholder {
   color: rgba(255, 255, 255, 0.733);
+}
+
+.storyPre {
+  white-space: pre-wrap;
+  font-family: inherit;
 }

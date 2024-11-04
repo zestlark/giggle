@@ -7,16 +7,17 @@ import StoryCard from "../component/storyCard";
 export const fetchCache = 'default-cache'
 
 export default async function page() {
-    const bannerData = {
-        bannerImageUrl: ImageUrl,
-        title: 'The Night Sky',
-        description: 'In a small village, a curious girl named Mia discovers the magic of the night sky. Join her as she embarks on an enchanting adventure among the stars and learns the beauty of the universe.',
-        url: '/stories/6728916461a91e3304ec7306'
-    }
 
     const rawstoryData = await fetch('http://localhost:3000/api/stories',{cache :'no-store'})
     const storyData = await rawstoryData.json()
     console.log(storyData);
+
+    const bannerData = {
+        bannerImageUrl: ImageUrl,
+        title: storyData.data[storyData.data.length - 1].title,
+        description: storyData.data[storyData.data.length - 1].description,
+        url: '/stories/' + storyData.data[storyData.data.length - 1]._id
+    }
 
 
     return (

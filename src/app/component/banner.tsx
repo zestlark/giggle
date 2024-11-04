@@ -15,7 +15,7 @@ export default function Banner({ bannerData, align = 'left', fullstory = false, 
                 <Image width={1000} height={1000} className={`absolute h-full object-cover w-full ${fullstory ? 'object-center' : 'object-bottom'}`} src={bannerData.bannerImageUrl} alt="" />
                 <div className="bg-gradient-to-b from-transparent to-black/100 absolute z-1 w-full h-full"></div>
                 <div className={`info max-w-[1000px] gap-[10px] -translate-x-[50%] -translate-y-[50%] mx-auto absolute top-[50%] left-[50%] w-full h-full flex flex-col justify-center  ${align == 'center' ? 'items-center text-center justify-start mt-[150px] lg:mt-[200px] gap-10' : 'items-start'} ${fullstory ? 'pb-14' : ''} p-5`}>
-                    <h2 className={`giggleFont tracking-wider text-4xl lg:text-[60px] leading-[60px]`}>{bannerData.title}</h2>
+                    <h2 className={`giggleFont tracking-wider text-4xl lg:text-[60px] md:leading-[60px]`}>{bannerData.title}</h2>
                     {children}
                     {!fullstory &&
                         <p className={`text-sm lg:text-lg opacity-90 max-w-[450px] ${fullstory ? 'leading-[20px]' : 'line-clamp-2'}`}>{bannerData.description}</p>
@@ -26,7 +26,7 @@ export default function Banner({ bannerData, align = 'left', fullstory = false, 
 
             {fullstory &&
 
-                <p className={`text-sm text-center lg:text-lg opacity-90 max-w-[550px] p-5 mx-auto leading-[30px] mt-10`}>{bannerData.description}</p>
+                <pre className={`storyPre text-sm text-center lg:text-lg opacity-90 max-w-[550px] p-5 mx-auto leading-[30px] mt-10 break-words`}>{bannerData.description}</pre>
             }
         </>
     )
