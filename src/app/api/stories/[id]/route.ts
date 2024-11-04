@@ -13,3 +13,15 @@ export async function GET(response:Response,{ params }: { params: { id: string }
         return NextResponse.json({ error: "Failed to create story" }, { status: 400 });
     }
 }
+
+export async function DELETE(response:Response,{ params }: { params: { id: string } }) {
+    try {
+        console.log(params.id);
+        await mongoDBConnect()
+        const data = await storiesModel.findByIdAndDelete(params.id);
+        return NextResponse.json({ data });
+    } catch (e) {
+        console.log(e);
+        return NextResponse.json({ error: "Failed to create story" }, { status: 400 });
+    }
+}

@@ -3,6 +3,8 @@ import { IStories } from "@/app/server/interface/IStories";
 import { storiesModel } from "@/app/server/model/stories.model";
 import { NextResponse } from "next/server";
 
+export const defaultCache = 'auto'
+
 export const GET = async (): Promise<any> => {
     try {
         await mongoDBConnect()

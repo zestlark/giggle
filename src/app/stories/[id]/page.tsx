@@ -14,8 +14,9 @@ export default async function StoryById({ params }: { params: { id: string } }) 
 
     return (
         <div>
-            <Banner align="center" bannerData={bannerData} fullstory={true} />
-            <TextAudioPlayer story={data.data.story}/>
+            <Banner align="center" bannerData={bannerData} fullstory={true} >
+                <TextAudioPlayer story={data.data.story} />
+            </Banner>
         </div>
     )
 }
