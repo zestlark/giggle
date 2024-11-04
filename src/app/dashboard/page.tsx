@@ -13,7 +13,7 @@ export default async function Dashboard() {
             <Header />
             <div className="mt-[100px] max-w-[1000px] mx-auto">
                 <Link href={'/addStory'}>
-                    <button className="m-5 bg-white p-2 text-black text-sm">Add New Story</button>
+                    <button className="m-5 bg-gray-400 hover:bg-white rounded-md p-2 text-black text-sm">Add New Story</button>
                 </Link>
                 <StoryCard storyData={storyData.data} />
             </div>
