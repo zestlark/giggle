@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { IStories } from "../server/interface/IStories";
 import Link from "next/link";
-import { deleteStoryById, editStoryById } from "../_actions/deleteAction";
+import { deleteStoryById, redirectToeditById } from "../_actions/deleteAction";
 
 interface IStoriesById extends IStories {
     _id: string
@@ -28,7 +28,7 @@ export default function StoryCard({ storyData, adminActions = false }: { storyDa
                                 <Image onClick={(event: React.MouseEvent) => { event.stopPropagation(); let accept = confirm('Are you sure'); if (accept) deleteStoryById(e._id) }} src="https://img.icons8.com/?size=48&id=11997&format=png" className="bg-red-500/40 rounded-md p-1" width={30} height={30} alt="" />
                             </div>
                             <div className="group-hover:flex cursor-pointer hidden absolute top-0 left-10 w-full p-2 bg-gradient-to-b from-black/40 to-transparent">
-                                <Image onClick={(event: React.MouseEvent) => { event.stopPropagation(); editStoryById(e._id) }} src="https://img.icons8.com/?size=24&id=86376&format=png" className="bg-blue-500/40 rounded-md p-1" width={30} height={30} alt="" />
+                                <Image onClick={(event: React.MouseEvent) => { event.stopPropagation(); redirectToeditById(e._id) }} src="https://img.icons8.com/?size=24&id=86376&format=png" className="bg-blue-500/40 rounded-md p-1" width={30} height={30} alt="" />
                             </div>
                         </>
                     }
